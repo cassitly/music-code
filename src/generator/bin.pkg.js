@@ -4,8 +4,8 @@ const path = require("path")
 const assets = path.join(__dirname, "../../assets");
 const packages = path.join(__dirname, "../../packages");
 
-if (existSync(assets)) return false;
-if (existSync(packages)) return false;
+if (existsSync(assets)) return false;
+if (existsSync(packages)) return false;
 
 mkdirSync(assets);
 mkdirSync(packages)
