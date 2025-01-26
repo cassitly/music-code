@@ -1,18 +1,9 @@
 /** Main Executor Function */
 const centralExecutor = async (ast) => {
     const context = {
-        variables: {},
-        functions: {},
-        loops: {},
-        currentFunction: null,
-        currentIfBlock: null,
-        currentLoop: null,
-        currentForLoop: null,
-        forLoops: {},
-        exportedPackages: {},
+        lyrics: null
     };
 
-    let basePath = path.resolve(__dirname, '../../../')
     /** Process each node in the AST */
     for (const node of ast) {
         try {
