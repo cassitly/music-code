@@ -1,3 +1,5 @@
+const { processNode, postProcessAST } = require("./processor.js")
+
 /** Main Executor Function */
 const centralExecutor = async (ast) => {
     const context = {
@@ -7,7 +9,7 @@ const centralExecutor = async (ast) => {
     /** Process each node in the AST */
     for (const node of ast) {
         try {
-            await processNode(node, basePath, context);            
+            await processNode(node, context);            
         } catch (error) {
             addOutput(`Error processing node of type ${node.type}: ${error}`);
         }
