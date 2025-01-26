@@ -1,5 +1,5 @@
 /** Function to process individual AST nodes */
-const processNode = async (node, basePath, context) => {
+function processNode(node, context) {
     switch (node.type) {
         /** Function handling */
         case "Style":
@@ -19,7 +19,7 @@ const processNode = async (node, basePath, context) => {
 };
 
 /** Post-process the AST */
-function postProcess = (ast, context) => {
+function postProcess(ast, context) {
     const { variables, functions, loops, forLoops } = context;
 
     ast.forEach((node) => {
