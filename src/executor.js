@@ -1,9 +1,13 @@
 const { processNode, postProcessAST } = require("./processor.js")
 
 /** Main Executor Function */
-const centralExecutor = async (ast) => {
+module.exports = async function centralExecutor(ast) {
     const context = {
-        lyrics: null
+        lyrics: null,
+        style: null,
+        title: null,
+        desc: null,
+        thumbnail: null
     };
 
     /** Process each node in the AST */
