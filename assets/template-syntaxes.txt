@@ -1,0 +1,44 @@
+# This is a comment, not that you would need it. but it's there.  
+@title Beneath the Neon Sky  
+
+@style Synthwave  
+
+@lyrics :start  
+Verse 1:  
+The city hums a melody, electric and alive,  
+Beneath the neon sky, we let the shadows thrive.  
+Reflections in the glass, of moments we can't keep,  
+The night holds all our secrets, buried deep.  
+
+Chorus:  
+Beneath the neon sky, we’re dancing in the glow,  
+Lost in the rhythm, where only we can go.  
+The colors fade and blur, but we’ll never say goodbye,  
+We’re eternal, beneath the neon sky.  
+
+Verse 2:  
+The skyline whispers stories of hearts that never heal,  
+Yet in your gaze, I find a world that feels surreal.  
+The pulse of every streetlight matches with our hearts,  
+Together in this dream, where endings never start.  
+
+Chorus:  
+Beneath the neon sky, we’re dancing in the glow,  
+Lost in the rhythm, where only we can go.  
+The colors fade and blur, but we’ll never say goodbye,  
+We’re eternal, beneath the neon sky.  
+
+Bridge:  
+Time slows to a crawl, as midnight takes the stage,  
+Our silhouettes entwined, breaking free of the cage.  
+We’ll live in this illusion, where dreams refuse to die,  
+Forever bound, beneath the neon sky.  
+
+Outro:  
+And as the dawn arrives, the city starts to weep,  
+But we’ll stay in this moment, where memories never sleep.  
+@lyrics :end  
+
+@thumbnail A glowing cyberpunk cityscape with towering skyscrapers, drenched in vibrant neon colors of pink, purple, and blue, with two figures silhouetted in the foreground.  
+
+@desc A synthwave anthem that captures the magic of fleeting nights under a neon-lit cityscape, blending nostalgia and hope into a timeless journey.  
