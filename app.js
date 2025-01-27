@@ -11,7 +11,7 @@ writeConfig();
 module.exports = async function defineApp() {
     const sendPrompt = configure();
     // Add GROQ function logic
-    if (!existsSync("./packages/Groq-chat/src/aiService")) return false;
+    if (!existsSync("./packages/Groq-chat/src/")) return false;
     const getResponse = require("./packages/Groq-chat/src/aiService");
     const response = await getResponse(sendPrompt);
 
