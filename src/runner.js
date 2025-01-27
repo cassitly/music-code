@@ -1,9 +1,10 @@
-const centralParse = require("./parser.js")
+const centralParse = require("./parser.js");
+const centralExecutor = require("./executor.js");
 
 // Main Compiler Function
 async function action(lines) {
     const main = centralParse(lines);
-    // await parseScript(main);
+    await centralExecutor(main);
 
     // Output for Debugging
     console.log(main)
