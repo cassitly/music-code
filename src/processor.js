@@ -37,6 +37,11 @@ function processNode(node, context) {
             context.ready.desc = true;
             break;
 
+        case "Tags":
+            context.tags = node.tag;
+            context.ready.tags = true;
+            break;
+
         /** Generic handling */
         case "Generic":
             if (context.lyrics.current === true) {

@@ -24,6 +24,10 @@ module.exports = function centralParse(lines) {
             if (line.startsWith("@desc")) {
                 // Also use as an style prompt.
                 return { type: "Description", message: line.match(/@desc (.+)/)?.[1] }
+            } else
+
+            if (line.startsWith("@tags")) {
+                return { type: "Tags", tag: line.match(/@tags (.+)/)?.[1] }
             }
 
             /** GENERIC STATEMENTS */

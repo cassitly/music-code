@@ -10,6 +10,7 @@ module.exports = async function centralExecutor(ast) {
         },
         style: null,
         title: null,
+        tags: null,
         desc: {
             processed: false,
             message: null
@@ -23,7 +24,8 @@ module.exports = async function centralExecutor(ast) {
             title: null,
             desc: null,
             thumbnail: null,
-            lyrics: null
+            lyrics: null,
+            tags: null
         }
     };
 
