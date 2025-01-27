@@ -1,15 +1,49 @@
+const { saveGeneration } = require("./generator/bin.pkg");
+
 /** Function to process individual AST nodes */
 function processNode(node, context) {
     switch (node.type) {
-        /** Function handling */
+        /** Music handling */
         case "Style":
-            context.functions[node.name] = { body: [], executed: false };
-            context.currentFunction = node.name;
+            context.style = node.style;
+            context.ready.style = true;
+            break;
+        
+        case "Title":
+            context.title = node.title;
+            context.ready.title = true;
+            break;
+        
+        case "Lyrics":
+            if (node.parameters === ":start") {
+                context.lyrics.current = true;
+                context.lyrics.params = node.parameters;
+            }
+
+            if (node.parameters === ":end") {
+                context.lyrics.current = false;
+                context.lyrics.params = node.parameters;
+            }
+            break;
+
+        /** Upload handling */
+        case "Thumbnail":
+            context.thumbnail.prompt = node.prompt;
+            context.ready.thumbnail = true;
+            break;
+
+        case "Description":
+            context.desc.message = node.message;
+            context.ready.desc = true;
             break;
 
         /** Generic handling */
         case "Generic":
-            console.log("Output Content by the AI was given an generic item: \n", node)
+            if (context.lyrics.current === true) {
+                context.lyrics.contents.push(node.content);
+                return false;
+            };
+            console.log("Output Content by the AI was given an generic item: \n", node);
             break;
 
         default:
@@ -20,11 +54,23 @@ function processNode(node, context) {
 
 /** Post-process the AST */
 function postProcess(ast, context) {
-    const { variables, functions, loops, forLoops } = context;
+    const { lyrics, ready } = context;
 
     ast.forEach((node) => {
         if (node.type === "Lyrics") {
-            // Add logic
+            if(!Array.isArray(lyrics.contents)) console.error("No Arrary was passed on Lyrics Contents: \n", lyrics.contents);
+            ready.lyrics = true;
+
+            saveGeneration(node.type, context);
+        } else
+        // Other Generations
+        if (node.type !== "Generic") {
+            saveGeneration(node.type, context);
+        }
+        // Unknown Generations
+        else {
+            if (node.type === "Generic") return false;
+            console.log("Unknown node type given by the AI:", node.type);
         }
     });
 };
