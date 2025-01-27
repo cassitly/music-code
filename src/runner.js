@@ -7,7 +7,7 @@ async function action(lines) {
     await centralExecutor(main);
 
     // Output for Debugging
-    console.log(main)
+    // console.log(main)
 };
 
 module.exports = async function run(content) {
