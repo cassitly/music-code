@@ -22,6 +22,7 @@ defineApp();
 ```
 
 Then run the code using NodeJS.
+This will generate an new song everytime it is ran.
 
 ### Dependencies
 This application requires:<br>
