@@ -1,4 +1,3 @@
-# This is a comment, not that you would need it. but its there.
 # You can type anything in here and it wont be registered
 @title The Song title
 
