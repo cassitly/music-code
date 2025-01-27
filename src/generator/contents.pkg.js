@@ -1,11 +1,10 @@
 module.exports = function getContent(item) {
     switch (item) {
         case "template-prompt.txt":
-            return "You have the ability to write song lyrics. Through some coding. The way this work is the commands below, allow you to set music styles, song lyrics, etc. Here are the commands. You are now required to make a song using the provided commands only.";
+            return "You have the ability to write song lyrics. Through some coding. The way this work is the commands below, allow you to set music styles, song lyrics, etc. Here are the commands. You are now required to make a song using the provided commands only.\nYou are not allowed to respond with anything other than the syntaxes below\n";
         
         case "template-syntaxes.txt":
-            const content = `# This is a comment, not that you would need it. but its there.
-# You can type anything in here and it wont be registered
+            const content = `# You can type anything in here and it wont be registered
 @title The Song title
 
 @style The music style of the song.
