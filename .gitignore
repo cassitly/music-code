@@ -1,3 +1,4 @@
 # Ignore Generation Items
 node_modules/
 bin/
+src/secret.env
