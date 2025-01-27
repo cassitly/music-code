@@ -4,9 +4,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node .",
-    "plugin": "git clone https://github.com/cassitly/Groq-chat.git && cd ..",
-    "package": "cd packages",
-    "build": "npm install && npm start && npm run package && npm run plugin"
+    "plugin": "git clone https://github.com/cassitly/Groq-chat.git",
+    "build": "npm install && npm start && npm run plugin && cd .."
   },
   "keywords": [],
   "author": "Cassitly",
