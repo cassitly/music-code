@@ -26,7 +26,8 @@ function saveGeneration(item, context, raw) {
             if (!ready.thumbnail) console.error("Thumbnail Generation not ready: \n", thumbnail.prompt);
             if (!thumbnail.generated) {
                 // TODO: Add thumbnail Generation.
-                console.log("Image Generation not implemented yet.")
+                console.log("Image Generation not implemented yet.");
+                writeFileSync(save + "/Thumbnail.txt", thumbnail.prompt, 'utf-8');
             }
             break;
 
