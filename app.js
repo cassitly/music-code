@@ -1,7 +1,9 @@
 
 const run = require("./src/runner");
+
 const { generateItems } = require("./src/generator/bin.pkg");
 const { writeConfig, configure } = require('./src/settings');
+const getResponse = require("./packages/Groq-chat/src/aiService");
 
 async function defineApp() {
     generateItems();
@@ -9,4 +11,9 @@ async function defineApp() {
 
     const sendPrompt = configure();
     // Add GROQ function logic
+    const response = await getResponse(sendPrompt);
+
+    // Execute the response
+    await run(response);
+    console.log("Raw Output: \n", response)
 }
