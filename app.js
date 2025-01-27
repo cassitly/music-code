@@ -5,7 +5,7 @@ const { generateItems } = require("./src/generator/bin.pkg");
 const { writeConfig, configure } = require('./src/settings');
 const getResponse = require("./packages/Groq-chat/src/aiService");
 
-async function defineApp() {
+module.exports = async function defineApp() {
     generateItems();
     writeConfig();
 
