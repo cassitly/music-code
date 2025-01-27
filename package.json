@@ -6,7 +6,7 @@
     "start": "node .",
     "plugin": "git clone https://github.com/cassitly/Groq-chat.git && cd ..",
     "package": "cd packages",
-    "build": "npm start && npm run package && npm run plugin && npm install"
+    "build": "npm install && npm start && npm run package && npm run plugin"
   },
   "keywords": [],
   "author": "Cassitly",

@@ -3,14 +3,16 @@ const run = require("./src/runner");
 
 const { generateItems } = require("./src/generator/bin.pkg");
 const { writeConfig, configure } = require('./src/settings');
-const getResponse = require("./packages/Groq-chat/src/aiService");
+const { existsSync } = require("fs");
+
+generateItems();
+writeConfig();
 
 module.exports = async function defineApp() {
-    generateItems();
-    writeConfig();
-
     const sendPrompt = configure();
     // Add GROQ function logic
+    if (!existsSync("./packages/Groq-chat/src/aiService")) return false;
+    const getResponse = require("./packages/Groq-chat/src/aiService");
     const response = await getResponse(sendPrompt);
 
     // Execute the response

@@ -59,11 +59,8 @@ function saveGeneration(item, context, raw) {
 }
 
 function generateItems() {
-    if (existsSync(assets)) return false;
-    if (existsSync(packages)) return false;
-    if (existsSync(bin)) return false;
-
-    mkdirSync(assets);
+    if (existsSync(packages) || existsSync(bin)) return false;
+    
     mkdirSync(packages);
     mkdirSync(bin);
 }
