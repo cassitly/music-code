@@ -1,5 +1,5 @@
 /** CENTRALIZED PARSER */
-module.exports = async function centralParse(lines) {
+module.exports = function centralParse(lines) {
     return lines
         .filter(line => line.trim() && !line.startsWith("#")) // Ignore empty lines and comments
         .map(line => {
@@ -17,7 +17,7 @@ module.exports = async function centralParse(lines) {
                 return { type: "Lyrics", parameters: line.match(/@lyrics (.+)/)?.[1] }
             } else
 
-            if (line.atartsWith("@thumbnail")) {
+            if (line.startsWith("@thumbnail")) {
                 return { type: "Thumbnail", prompt: line.match(/@thumbnail (.+)/)?.[1] }
             } else
 
