@@ -1,1 +1,3 @@
+# Ignore Generation Items
 node_modules/
+bin/
