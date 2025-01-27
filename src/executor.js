@@ -1,13 +1,30 @@
-const { processNode, postProcessAST } = require("./processor.js")
+const { processNode, postProcess } = require("./processor.js")
 
 /** Main Executor Function */
 module.exports = async function centralExecutor(ast) {
     const context = {
-        lyrics: null,
+        lyrics: {
+            current: null,
+            params: null,
+            contents: []
+        },
         style: null,
         title: null,
-        desc: null,
-        thumbnail: null
+        desc: {
+            processed: false,
+            message: null
+        },
+        thumbnail: {
+            prompt: null,
+            generated: false
+        },
+        ready: {
+            style: null,
+            title: null,
+            desc: null,
+            thumbnail: null,
+            lyrics: null
+        }
     };
 
     /** Process each node in the AST */
@@ -15,10 +32,10 @@ module.exports = async function centralExecutor(ast) {
         try {
             await processNode(node, context);            
         } catch (error) {
-            addOutput(`Error processing node of type ${node.type}: ${error}`);
+            console.error(`Error processing node of type ${node.type}: ${error}`);
         }
     }
 
     /** Handle post-processing for collected functions and IfStatements */
-    postProcessAST(ast, context);
+    postProcess(ast, context);
 };
