@@ -5,7 +5,7 @@ const assets = path.join(__dirname, "../../assets");
 const bin = path.join(__dirname, "../../bin");
 const packages = path.join(__dirname, "../../packages");
 
-function saveGeneration(item, context) {
+function saveGeneration(item, context, raw) {
     const { ready, lyrics, title, style, thumbnail, desc } = context;
     const save = path.join(bin, "/", title);
     if (!existsSync(save)) mkdirSync(save);
@@ -45,6 +45,10 @@ function saveGeneration(item, context) {
         case "Title":
             if (!ready.title) console.error("Title Generation not ready: \n", title);
             writeFileSync(save + "/Title.txt", title, "utf-8");
+            break;
+
+        case "Raw":
+            writeFileSync(save + "/Raw_Output.txt", raw, 'utf-8');
             break;
 
         default:

@@ -61,11 +61,11 @@ function postProcess(ast, context) {
             if(!Array.isArray(lyrics.contents)) console.error("No Arrary was passed on Lyrics Contents: \n", lyrics.contents);
             ready.lyrics = true;
 
-            saveGeneration(node.type, context);
+            saveGeneration(node.type, context, node);
         } else
         // Other Generations
         if (node.type !== "Generic") {
-            saveGeneration(node.type, context);
+            saveGeneration(node.type, context, node);
         }
         // Unknown Generations
         else {
