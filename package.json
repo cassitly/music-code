@@ -12,6 +12,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@google-cloud/storage": "^7.15.0",
+    "@google-cloud/text-to-speech": "^5.8.0",
     "dotenv": "^16.4.7",
     "fs": "^0.0.1-security",
     "groq-sdk": "^0.12.0",
