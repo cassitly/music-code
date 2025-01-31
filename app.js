@@ -5,9 +5,6 @@ const { generateItems } = require("./src/generator/bin.pkg");
 const { writeConfig, configure } = require('./src/settings');
 const { existsSync } = require("fs");
 
-generateItems();
-writeConfig();
-
 async function defineApp() {
     const sendPrompt = configure();
     // Add GROQ function logic
@@ -20,4 +17,8 @@ async function defineApp() {
     console.log("Raw Output: \n", response)
 }
 
-defineApp();
+module.exports = async function appReady() {
+    generateItems();
+    writeConfig();
+    await defineApp();
+}
