@@ -1,4 +1,5 @@
 const { saveGeneration } = require("./generator/bin.pkg");
+const speak = require('../packages/unreleased/text2speech');
 
 /** Function to process individual AST nodes */
 function processNode(node, context) {
@@ -41,7 +42,7 @@ function processNode(node, context) {
             context.tags = node.tag;
             context.ready.tags = true;
             break;
-
+            
         /** Generic handling */
         case "Generic":
             if (context.lyrics.current === true) {
@@ -69,12 +70,16 @@ function postProcess(ast, context) {
             saveGeneration(node.type, context, node);
         } else
         // Other Generations
-        if (node.type !== "Generic") {
+        if (node.type !== "Generic" && node.type !== "Speech") {
             saveGeneration(node.type, context, node);
+        } else
+
+        if (node.type === "Speech") {
+            speak(node.speech);
         }
         // Unknown Generations
         else {
-            if (node.type === "Generic") return false;
+            if (node.type === "Generic" || node.type === "Speech") return false;
             console.log("Unknown node type given by the AI:", node.type);
         }
     });

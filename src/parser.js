@@ -29,7 +29,7 @@ module.exports = function centralParse(lines) {
             if (line.startsWith("@tags")) {
                 return { type: "Tags", tag: line.match(/@tags (.+)/)?.[1] }
             }
-
+            
             /** GENERIC STATEMENTS */
             else {
                 return { type: "Generic", content: line };

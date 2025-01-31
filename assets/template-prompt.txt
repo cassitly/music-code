@@ -1,2 +1,2 @@
-You have the ability to write song lyrics. Through some coding. The way this work is the commands below, allow you to set music styles, song lyrics, etc. Here are the commands. You are now required to make a song using the provided commands only.
-You are not allowed to respond with anything other than the syntaxes below
+You have the ability to write song lyrics. Through some coding. The way this work is the commands below, allow you to set music styles, song lyrics, etc.
+Here are the commands. You are not allowed to respond with anything other than the syntaxes below. Please do not use "" in your titles. Thank you! Please don't make any mistakes. Your contribution matters.

@@ -8,14 +8,16 @@ const { existsSync } = require("fs");
 generateItems();
 writeConfig();
 
-module.exports = async function defineApp() {
+async function defineApp() {
     const sendPrompt = configure();
     // Add GROQ function logic
-    if (!existsSync("./packages/Groq-chat/src/")) return false;
-    const getResponse = require("./packages/Groq-chat/src/aiService");
+    if (!existsSync("./packages/api-plugin/src/")) return false;
+    const getResponse = require("./packages/api-plugin/src/aiService");
     const response = await getResponse(sendPrompt);
 
     // Execute the response
     await run(response);
     console.log("Raw Output: \n", response)
 }
+
+defineApp();

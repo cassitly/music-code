@@ -11,6 +11,7 @@ module.exports = async function centralExecutor(ast) {
         style: null,
         title: null,
         tags: null,
+        speech: null,
         desc: {
             processed: false,
             message: null
