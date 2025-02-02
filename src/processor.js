@@ -1,5 +1,4 @@
 const { saveGeneration } = require("./generator/bin.pkg");
-const speak = require('../packages/unreleased/text2speech');
 
 /** Function to process individual AST nodes */
 function processNode(node, context) {
