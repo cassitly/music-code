@@ -1,4 +1,7 @@
 # Ignore Generation Items
 node_modules/
 bin/
+
+# Ignore other items
 src/secret.env
+assets/
