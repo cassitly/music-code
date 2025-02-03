@@ -33,7 +33,7 @@ module.exports = async function centralExecutor(ast) {
     /** Process each node in the AST */
     for (const node of ast) {
         try {
-            await processNode(node, context);            
+            await processNode(node, context);  
         } catch (error) {
             console.error(`Error processing node of type ${node.type}: ${error}`);
         }

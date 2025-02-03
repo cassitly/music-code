@@ -1,4 +1,4 @@
-const { existsSync, mkdirSync, writeFileSync } = require("fs");
+const { existsSync, mkdirSync, writeFileSync, appendFileSync } = require("fs");
 const path = require("path")
 
 const assets = path.join(__dirname, "../../assets");
@@ -54,7 +54,7 @@ function saveGeneration(item, context, raw) {
             break;
 
         case "Raw":
-            writeFileSync(save + "/Raw_Output.txt", raw, 'utf-8');
+            appendFileSync(save + "/Raw_Output.txt", raw, 'utf-8');
             break;
 
         default:

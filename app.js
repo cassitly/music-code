@@ -1,4 +1,3 @@
-
 const run = require("./src/runner");
 
 const { generateItems } = require("./src/generator/bin.pkg");
@@ -17,8 +16,9 @@ async function defineApp() {
     console.log("Raw Output: \n", response)
 }
 
-module.exports = async function appReady() {
+async function appReady() {
     generateItems();
     writeConfig();
-    await defineApp();
 }
+
+module.exports = { appReady, defineApp }
