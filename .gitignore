@@ -5,3 +5,5 @@ bin/
 # Ignore other items
 src/secret.env
 assets/
+live/
+run.js

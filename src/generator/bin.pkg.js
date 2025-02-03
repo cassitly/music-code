@@ -64,10 +64,13 @@ function saveGeneration(item, context, raw) {
 }
 
 function generateItems() {
-    if (existsSync(packages) || existsSync(bin)) return false;
+    if (existsSync(packages)) return false;
+    if (existsSync(bin)) return false;
+    if (existsSync(assets)) return false;
     
     mkdirSync(packages);
     mkdirSync(bin);
+    mkdirSync(assets);
 }
 
 module.exports = { generateItems, saveGeneration, assets }
