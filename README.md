@@ -16,9 +16,10 @@ Then create an javascript file. Name it whatever you like.<br>
 Write down this code in the Javascript File:<br>
 
 ```javascript
-const defineApp = require("./music-code/app.js");
+const { defineApp, appReady } = require("./music-code/app.js");
 
-defineApp();
+appReady(); // App Ready runs the file generation
+await defineApp(); // Define App allows the generation of the item
 ```
 
 Then run the code using NodeJS.
