@@ -12,6 +12,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@music-code:private/source": "1.0"
+    "@music-code/source": "1.0"
   }
 }
