@@ -3,8 +3,7 @@
   "version": "1.2.0",
   "main": "app.js",
   "workspaces": [
-    "packages/*", // Example: includes all subdirectories in 'packages'
-    "apps/my-app" // Example: includes a specific application
+    "packages/*"
   ],
   "scripts": {
     "runtime:start": "node .",
