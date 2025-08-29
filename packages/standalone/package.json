@@ -1,0 +1,11 @@
+{
+  "name": "@music-code/standalone",
+  "version": "1.0",
+  "main": "dist/app.js",
+  "author": "Cassitly",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@music-code/source": "1.0"
+  }
+}
