@@ -1,7 +1,7 @@
-const run = require("./src/runner");
+const run = require("@source/runner");
 
-const { generateItems } = require("./src/generator/bin.pkg");
-const { writeConfig, configure } = require('./src/settings');
+const { generateItems } = require("@source/generator/bin.pkg");
+const { writeConfig, configure } = require('@source/settings');
 const { existsSync } = require("fs");
 
 async function defineApp() {
