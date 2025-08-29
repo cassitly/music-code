@@ -3,7 +3,8 @@
   "version": "1.2.0",
   "main": "app.js",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "src/"
   ],
   "scripts": {
     "runtime:start": "node .",
