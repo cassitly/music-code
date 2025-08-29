@@ -1,11 +1,11 @@
 {
   "name": "music-code",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "main": "app.js",
   "scripts": {
-    "start": "node .",
-    "plugin": "git clone https://github.com/cassitly/Groq-chat.git",
-    "build": "npm install && npm start && npm run plugin && cd .."
+    "runtime:start": "node .",
+    "build:plugin": "git clone https://github.com/cassitly/Groq-chat.git",
+    "runtime:build": "npm install && npm start && npm run plugin && cd .."
   },
   "keywords": [],
   "author": "Cassitly",
