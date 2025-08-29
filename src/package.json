@@ -1,12 +1,7 @@
 {
-  "name": "source",
+  "name": "@music-code/source",
   "version": "1.0",
   "private": true,
-  "scripts": {
-    "build:source": "git clone https://github.com/cassitly/Groq-chat.git",
-    "runtime:start": "node .",
-    "runtime:build": "npm install && npm start && npm run plugin && cd .."
-  },
   "author": "Cassitly",
   "license": "ISC",
   "description": "",
